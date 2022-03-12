@@ -3,11 +3,6 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import api from '../services/api';
 
-type DataProps = {
-  name: string,
-  email: string,
-}
-
 function FormSubmit() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')

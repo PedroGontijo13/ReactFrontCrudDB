@@ -1,9 +1,10 @@
 import FormSubmit from "./Components/formSubmit"
+import { AppRoutes } from "./routes"
 
 function App() {
   return (
     <div>
-      <FormSubmit/>
+      <AppRoutes/>
     </div>
   )
 }
