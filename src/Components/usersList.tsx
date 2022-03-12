@@ -15,7 +15,7 @@ function UsersList() {
             console.log(response.data)
             return(
                 setUsers(
-                    <div>
+                    <>
                         {response.data.map((data: any, index: any) => (
                             <tr key={index}>
                                 <h3></h3>
@@ -24,7 +24,7 @@ function UsersList() {
                                 <th>{data.email}</th>
                             </tr>
                         ))}
-                    </div>
+                    </>
                 )
             )
         })
@@ -44,12 +44,13 @@ function UsersList() {
     }
 
     return(
-        <Table>
+        <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
                     <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Username</th>
                 </tr>
             </thead>
             <tbody>

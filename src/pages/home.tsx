@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { Title, SubTitle, Center, Link } from "../Styles/styles";
+import { SubTitle, Center, Link } from "../Styles/styles";
 
 export default function Home() {
 
@@ -7,11 +7,6 @@ export default function Home() {
         <Container fluid="xl">
             <Container fluid="xs">
                 <Center>
-                    <Row>
-                        <Col>
-                            <Link href="/"><Title>CRUD</Title></Link>
-                        </Col>
-                    </Row>
                     <Row>
                         <Col>
                             <Link href="http://localhost:3000/create"><SubTitle>Create</SubTitle></Link>
