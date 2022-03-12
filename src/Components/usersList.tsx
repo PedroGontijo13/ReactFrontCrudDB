@@ -1,9 +1,10 @@
 import api from '../services/api'
-import { Table } from 'react-bootstrap'
+import { Alert, Table } from 'react-bootstrap'
 import { ReactElement, useEffect, useState } from 'react'
 
 function UsersList() {
     const [users, setUsers] = useState<ReactElement<any, any>>()
+    const [show, setShow] = useState(true);
 
     useEffect(() => {
         getUsers()
@@ -28,7 +29,17 @@ function UsersList() {
             )
         })
         .catch((err) => {
-            alert("ops! ocorreu um erro!" + err)
+            console.log(err)
+            return (
+                <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+                    <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+                    <p>
+                        Change this and that and try again. Duis mollis, est non commodo
+                        luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                        Cras mattis consectetur purus sit amet fermentum.
+                    </p>
+                </Alert>
+            )
         })
     }
 
