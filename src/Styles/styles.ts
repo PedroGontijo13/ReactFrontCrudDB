@@ -16,7 +16,15 @@ export const Center = styled.div`
     padding: 10px;
 `
 
+export const Link = styled.a`
+  text-decoration: none;
+  color: white;
+`
+
 export const GlobalStyle = createGlobalStyle`
+    a:hover{
+        color: grey;
+    }
     body{
         font-family: 'Roboto Mono', monospace;
         background-color: #1C1C1C;

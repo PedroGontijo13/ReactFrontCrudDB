@@ -14,8 +14,8 @@ export function AppRoutes() {
             <GlobalStyle/>
             <Routes>
                 <Route index element={<Home/>} />
-                <Route path="/form" element={<FormSubmit/>} />
-                <Route path="/users" element={<UsersList/>} />
+                <Route path="/create" element={<FormSubmit/>} />
+                <Route path="/read" element={<UsersList/>} />
             </Routes>
         </Router>
     )
