@@ -1,10 +1,13 @@
+import { Container } from "react-bootstrap"
 import FormSubmit from "./Components/formSubmit"
 import { AppRoutes } from "./routes"
 
 function App() {
   return (
     <div>
-      <AppRoutes/>
+      <Container>
+       <AppRoutes/>
+      </Container>
     </div>
   )
 }

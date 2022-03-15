@@ -11,7 +11,7 @@ export default function Home() {
                         <Col>
                             <Link href="http://localhost:3000/create"><SubTitle>Create</SubTitle></Link>
                             <Link href="http://localhost:3000/read"><SubTitle>Read</SubTitle></Link>
-                            <Link><SubTitle>Update</SubTitle></Link>
+                            <Link href="http://localhost:3000/update"><SubTitle>Update</SubTitle></Link>
                             <Link href="#"><SubTitle>Delete</SubTitle></Link>
                         </Col>
                     </Row>

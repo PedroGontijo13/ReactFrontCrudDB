@@ -3,15 +3,17 @@ import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import api from "../services/api";
 
-function FormSubmit() {
+function FormPut() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [id, setId] = useState("");
 
   function handleSubmit() {
-    const data = { name: name, email: email };
+    const data = { id: id, name: name, email: email };
 
-    const response = api.post("/users", data);
+    const response = api.put(`/users/${data.id}`, data);
 
+    console.log(response)
     console.log(response);
   }
 
@@ -23,6 +25,20 @@ function FormSubmit() {
           handleSubmit();
         }}
       >
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <Form.Label>Id</Form.Label>
+          <Form.Control
+            type="id"
+            value={id}
+            onChange={(event) => {
+              setId(event.target.value);
+            }}
+            placeholder="Enter Id"
+          />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Name</Form.Label>
           <Form.Control
@@ -59,4 +75,4 @@ function FormSubmit() {
   );
 }
 
-export default FormSubmit;
+export default FormPut;

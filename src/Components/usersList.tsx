@@ -48,12 +48,13 @@ function UsersList() {
             <thead>
                 <tr>
                     <th>#</th>
+                    <th>Id</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Username</th>
                 </tr>
             </thead>
             <tbody>
+                {show}
                 {users}
             </tbody>
         </Table>
