@@ -3,6 +3,7 @@ import {
     Route,
     Routes
 } from "react-router-dom"
+import FormDelete from "./Components/formDelete"
 import FormPut from "./Components/formPut"
 import FormSubmit from "./Components/formSubmit"
 import NavButton from "./Components/navButton"
@@ -20,6 +21,7 @@ export function AppRoutes() {
                 <Route path="/create" element={<FormSubmit/>} />
                 <Route path="/read" element={<UsersList/>} />
                 <Route path="/update" element={<FormPut/>} />
+                <Route path="/delete" element={<FormDelete/>} />
             </Routes>
         </Router>
     )

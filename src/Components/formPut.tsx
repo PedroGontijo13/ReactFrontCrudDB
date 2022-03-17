@@ -14,7 +14,6 @@ function FormPut() {
     const response = api.put(`/users/${data.id}`, data);
 
     console.log(response)
-    console.log(response);
   }
 
   return (
@@ -23,6 +22,7 @@ function FormPut() {
         onSubmit={(event: any) => {
           event.preventDefault();
           handleSubmit();
+          alert("ENVIADO!")
         }}
       >
         <Form.Group className="mb-3" controlId="formBasicName">
