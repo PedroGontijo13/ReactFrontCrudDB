@@ -9,7 +9,11 @@ function FormDelete() {
   function handleSubmit() {
     const data = { id: id };
 
-    const response = api.delete(`/users/${data.id}`);
+    const response = api.delete(`/users/${data.id}`, {
+        headers: {
+            'Access-Control-Allow-Credentials':true
+        }
+    });
 
     console.log(response)
   }
